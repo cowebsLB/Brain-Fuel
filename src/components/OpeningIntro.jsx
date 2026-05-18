@@ -5,6 +5,7 @@ const TOTAL_DURATION_MS = 3000;
 const SPLIT_START_MS = 1350;
 
 export default function OpeningIntro({ onFinish }) {
+  const logoSrc = `${import.meta.env.BASE_URL}assets/logo.avif`;
   const [isSplitting, setIsSplitting] = useState(false);
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function OpeningIntro({ onFinish }) {
 
       <div className="intro-stage" aria-hidden="true">
         <div className="intro-logo-spin">
-          <img src="/assets/logo.avif" alt="" className="intro-logo intro-logo-center" />
+          <img src={logoSrc} alt="" className="intro-logo intro-logo-center" />
         </div>
 
         <div className="intro-split-line">
@@ -50,10 +51,10 @@ export default function OpeningIntro({ onFinish }) {
         </div>
 
         <div className="intro-door intro-door-left">
-          <img src="/assets/logo.avif" alt="" className="intro-door-logo intro-door-logo-left" />
+          <img src={logoSrc} alt="" className="intro-door-logo intro-door-logo-left" />
         </div>
         <div className="intro-door intro-door-right">
-          <img src="/assets/logo.avif" alt="" className="intro-door-logo intro-door-logo-right" />
+          <img src={logoSrc} alt="" className="intro-door-logo intro-door-logo-right" />
         </div>
       </div>
     </div>

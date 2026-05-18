@@ -1,3 +1,5 @@
+const ASSET_BASE = `${import.meta.env.BASE_URL}assets`;
+
 export const menuSections = [
   {
     id: "hotties",
@@ -19,9 +21,9 @@ export const menuSections = [
       ["Turkish", "$4"]
     ],
     separatorImage: {
-      avif: "/assets/separator-hotties.avif",
-      webp: "/assets/separator-hotties.webp",
-      png: "/assets/separator-hotties.png"
+      avif: `${ASSET_BASE}/separator-hotties.avif`,
+      webp: `${ASSET_BASE}/separator-hotties.webp`,
+      png: `${ASSET_BASE}/separator-hotties.png`
     },
     separatorLabel: "Freshly Brewed Heat"
   },
@@ -47,9 +49,9 @@ export const menuSections = [
       ["Caramel Milkshake", "$4"]
     ],
     separatorImage: {
-      avif: "/assets/separator-coldies.avif",
-      webp: "/assets/separator-coldies.webp",
-      png: "/assets/separator-coldies.png"
+      avif: `${ASSET_BASE}/separator-coldies.avif`,
+      webp: `${ASSET_BASE}/separator-coldies.webp`,
+      png: `${ASSET_BASE}/separator-coldies.png`
     },
     separatorLabel: "Ice-Cold Refuel"
   },
@@ -66,9 +68,9 @@ export const menuSections = [
       ["Tiramisu", "$4"]
     ],
     separatorImage: {
-      avif: "/assets/separator-desserts.avif",
-      webp: "/assets/separator-desserts.webp",
-      png: "/assets/separator-desserts.png"
+      avif: `${ASSET_BASE}/separator-desserts.avif`,
+      webp: `${ASSET_BASE}/separator-desserts.webp`,
+      png: `${ASSET_BASE}/separator-desserts.png`
     },
     separatorLabel: "Sweet Finish"
   },
@@ -84,9 +86,9 @@ export const menuSections = [
       ["Hot Water", "$1"]
     ],
     separatorImage: {
-      avif: "/assets/separator-tea-water.avif",
-      webp: "/assets/separator-tea-water.webp",
-      png: "/assets/separator-tea-water.png"
+      avif: `${ASSET_BASE}/separator-tea-water.avif`,
+      webp: `${ASSET_BASE}/separator-tea-water.webp`,
+      png: `${ASSET_BASE}/separator-tea-water.png`
     },
     separatorLabel: "Light and Calm"
   }
