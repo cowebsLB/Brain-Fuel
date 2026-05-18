@@ -1,0 +1,18 @@
+:root {
+  --bf-bg: #19120e;
+  --bf-surface: #261e1a;
+  --bf-surface-high: #312824;
+  --bf-surface-highest: #3d332e;
+  --bf-on-surface: #f0dfd8;
+  --bf-on-surface-variant: #dbc1b6;
+  --bf-outline: #a38c82;
+  --bf-outline-variant: #55433b;
+  --bf-primary: #ffb692;
+  --bf-coffee: #8a3f12;
+  --bf-coffee-dark: #6a3a23;
+  --bf-max-width: 1200px;
+  --bf-gutter: 24px;
+  --bf-mobile-margin: 16px;
+  --bf-desktop-margin: 64px;
+  --bf-radius: 8px;
+}
