@@ -11,6 +11,7 @@ body,
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
     radial-gradient(circle at 88% 18%, #1a2f3f 0%, transparent 33%),
     linear-gradient(180deg, #1a130f, #140d09 50%, #120b08);
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 body::before {

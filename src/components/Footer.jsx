@@ -9,6 +9,7 @@ const iconMap = {
 };
 
 export default function Footer({ ctas }) {
+  const safeCtas = Array.isArray(ctas) ? ctas : [];
   const openingHours = [
     { day: "Mon-Sat", hours: "10 AM-10 PM" },
     { day: "Sunday", hours: "5-11 PM" }
@@ -31,7 +32,7 @@ export default function Footer({ ctas }) {
           </div>
 
           <div className="footer-cta-row">
-            {ctas
+            {safeCtas
               .filter((cta) => cta.label !== "Chat on WhatsApp")
               .map((cta) => {
                 const Icon = iconMap[cta.label];
@@ -55,6 +56,7 @@ export default function Footer({ ctas }) {
                   </a>
                 );
               })}
+            {safeCtas.length === 0 ? <p className="footer-empty-state">Links will be available soon.</p> : null}
           </div>
         </div>
       </div>

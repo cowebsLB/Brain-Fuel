@@ -1,4 +1,4 @@
-export default function Hero() {
+export default function Hero({ whatsappHref }) {
   return (
     <section className="hero" aria-labelledby="menu-heading">
       <div className="steam steam-1" aria-hidden="true" />
@@ -7,8 +7,22 @@ export default function Hero() {
         Menu
       </h2>
       <p className="hero-tagline reveal" style={{ animationDelay: "120ms" }}>
-        Fuel your brain, one cup at a time.
+        Specialty coffee, desserts, and quick pickup.
       </p>
+      <p className="hero-meta reveal" style={{ animationDelay: "160ms" }}>
+        Mar Roukoz, Dekwaneh. Open daily.
+      </p>
+      {whatsappHref ? (
+        <a
+          href={whatsappHref}
+          className="hero-cta reveal"
+          style={{ animationDelay: "200ms" }}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Order on WhatsApp
+        </a>
+      ) : null}
     </section>
   );
 }

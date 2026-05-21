@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
+import { markOpeningIntroSeen } from "../utils/openingIntro";
 
-const SESSION_KEY = "brain_fuel_intro_seen";
-const TOTAL_DURATION_MS = 3000;
-const SPLIT_START_MS = 1350;
+const TOTAL_DURATION_MS = 2200;
+const SPLIT_START_MS = 900;
 
 export default function OpeningIntro({ onFinish }) {
   const logoSrc = `${import.meta.env.BASE_URL}assets/logo.avif`;
@@ -14,7 +14,7 @@ export default function OpeningIntro({ onFinish }) {
     }, SPLIT_START_MS);
 
     const timer = window.setTimeout(() => {
-      sessionStorage.setItem(SESSION_KEY, "1");
+      markOpeningIntroSeen();
       onFinish();
     }, TOTAL_DURATION_MS);
 
@@ -25,7 +25,7 @@ export default function OpeningIntro({ onFinish }) {
   }, [onFinish]);
 
   const handleSkip = () => {
-    sessionStorage.setItem(SESSION_KEY, "1");
+    markOpeningIntroSeen();
     onFinish();
   };
 
@@ -59,21 +59,4 @@ export default function OpeningIntro({ onFinish }) {
       </div>
     </div>
   );
-}
-
-export function shouldShowOpeningIntro() {
-  if (typeof window === "undefined") {
-    return false;
-  }
-
-  const forceIntro = new URLSearchParams(window.location.search).get("intro") === "1";
-  if (forceIntro) {
-    return true;
-  }
-
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    return false;
-  }
-
-  return sessionStorage.getItem(SESSION_KEY) !== "1";
 }

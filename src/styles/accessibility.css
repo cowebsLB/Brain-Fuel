@@ -21,4 +21,27 @@
   .opening-intro {
     display: none !important;
   }
+
+  .story-scene {
+    height: auto !important;
+  }
+
+  .story-sticky {
+    position: relative !important;
+    min-height: auto !important;
+  }
+
+  .story-bg {
+    transform: none !important;
+    filter: brightness(0.65) !important;
+  }
+
+  .story-progress {
+    display: none !important;
+  }
+
+  .story-cinematic-layer,
+  .story-ambient-orb {
+    display: none !important;
+  }
 }

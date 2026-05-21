@@ -19,9 +19,31 @@
   transition: transform 180ms ease-out, box-shadow 180ms ease-out;
 }
 
+.hero-cta,
+.mobile-order-bar,
+.story-cta,
+.story-progress-dot,
+.icon-cta-button {
+  transition: transform 180ms ease-out, box-shadow 180ms ease-out;
+}
+
+.hero-cta:hover,
+.mobile-order-bar:hover,
+.story-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
 .whatsapp-fab:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+.story-cta:active,
+.mobile-order-bar:active,
+.hero-cta:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.26);
 }
 
 @keyframes revealUp {
@@ -89,5 +111,17 @@
   to {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+@keyframes storyCueFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.78;
+  }
+  50% {
+    transform: translateY(4px);
+    opacity: 1;
   }
 }
